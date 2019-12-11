@@ -12,9 +12,8 @@ spring:
 logging:
   level:
     root: info
-    cn.sicnu.group2.blog: debug
-  file:
-    name: log/blog-dev.log
+    com.lrm: debug
+  file: log/blog-dev.log
 
 
 

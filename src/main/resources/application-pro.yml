@@ -12,8 +12,10 @@ spring:
 logging:
   level:
     root: warn
-    cn.sicnu.group2.blog: info
-  file:
-    name: log/blog-pro.log
+    com.lrm: info
+  file: log/blog-pro.log
 server:
   port: 8081
+
+
+
