@@ -1,6 +1,7 @@
 package cn.sicnu.group2.blog.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,7 @@ public class Tag {
     @Id
     @GeneratedValue
     private Long id;
+    @NotNull(message = "标签名称不能为空")
     private String name;
 
     @ManyToMany(mappedBy = "tags")
