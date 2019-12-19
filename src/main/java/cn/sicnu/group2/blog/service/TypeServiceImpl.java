@@ -1,7 +1,9 @@
 package cn.sicnu.group2.blog.service;
 
+import cn.sicnu.group2.blog.NotFindException;
 import cn.sicnu.group2.blog.dao.TypeRepository;
 import cn.sicnu.group2.blog.entity.Type;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,13 +23,13 @@ public class TypeServiceImpl implements TypeService {
     @Transactional
     @Override
     public Type saveType(Type type) {
-        return null;
+        return typeRepository.save(type);
     }
 
     @Transactional
     @Override
     public Type getType(Long id) {
-        return typeRepository.getOne(id);
+        return typeRepository.findById( id ).get();
     }
 
     @Transactional
@@ -39,19 +41,24 @@ public class TypeServiceImpl implements TypeService {
     @Transactional
     @Override
     public Type updateType(Long id, Type type) {
-        Type t = typeRepository.getOne(id);
+        Type t = typeRepository.findById( id ).get();
         if (t == null ){
-            typeRepository.saveAndFlush(type);
+           throw  new NotFindException("不存在你查询的数据类型");
         }
         else {
-           typeRepository.saveAndFlush(type);
+            BeanUtils.copyProperties( type,t );
+            return typeRepository.save( t );
         }
-        return t;
     }
 
     @Transactional
     @Override
-    public boolean deleteType(Long id) {
-        return false;
+    public void deleteType(Long id) {
+        typeRepository.deleteById( id );
+    }
+
+    @Override
+    public Type getTypeByName(String name) {
+        return typeRepository.findByName( name );
     }
 }

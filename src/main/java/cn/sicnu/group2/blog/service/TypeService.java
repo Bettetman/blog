@@ -18,6 +18,8 @@ public interface TypeService {
 
     Type updateType(Long id,Type type);
 
-    boolean deleteType(Long id);
+    void deleteType(Long id);
+
+    Type getTypeByName(String name);
 
 }
