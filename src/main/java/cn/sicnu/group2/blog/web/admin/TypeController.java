@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -31,7 +32,7 @@ public class TypeController {
                         direction = Sort.Direction.ASC) Pageable pageable
                         , Model model){
         model.addAttribute( "page", typeService.listType( pageable ));
-        return "/admin/types";
+        return "admin/types";
     }
 
     @GetMapping("/types/input")
@@ -58,5 +59,35 @@ public class TypeController {
         return "redirect:/admin/types";
     }
 
+    @GetMapping("/types/{id}/input")
+    public String editPost(@PathVariable long id,Model model){
+        model.addAttribute( "type",typeService.getType( id ) );
+        return "admin/types-input";
+    }
+
+    @GetMapping("/types/{id}/delete")
+    public  String delete(@PathVariable long id,RedirectAttributes attributes){
+        typeService.deleteType( id );
+        attributes.addFlashAttribute( "message","删除成功" );
+        return "redirect:/admin/types";
+    }
+
+    @PostMapping("/types/{id}")
+    public String editPost(@Valid Type type, BindingResult result,@PathVariable Long id, RedirectAttributes attributes) {
+        Type type1 = typeService.getTypeByName(type.getName());
+        if (type1 != null) {
+            result.rejectValue("name","nameError","不能添加重复的分类");
+        }
+        if (result.hasErrors()) {
+            return "admin/types-input";
+        }
+        Type t = typeService.updateType(id,type);
+        if (t == null ) {
+            attributes.addFlashAttribute("message", "更新失败");
+        } else {
+            attributes.addFlashAttribute("message", "更新成功");
+        }
+        return "redirect:/admin/types";
+    }
 
 }
