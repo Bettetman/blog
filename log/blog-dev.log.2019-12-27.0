@@ -1,0 +1,140 @@
+2019-12-27 23:25:20.301  INFO 8320 --- [restartedMain] cn.sicnu.group2.blog.BlogApplication     : Starting BlogApplication on PC-201901032040 with PID 8320 (I:\javaproject\blog\target\classes started by Administrator in I:\javaproject\blog)
+2019-12-27 23:25:20.307  INFO 8320 --- [restartedMain] cn.sicnu.group2.blog.BlogApplication     : The following profiles are active: dev
+2019-12-27 23:25:20.362  INFO 8320 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in I:\maven\apache-maven-3.6.1\maven-repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/I:/maven/apache-maven-3.6.1/maven-repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/I:/maven/apache-maven-3.6.1/maven-repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/I:/maven/apache-maven-3.6.1/maven-repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/I:/maven/apache-maven-3.6.1/maven-repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/I:/maven/apache-maven-3.6.1/maven-repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/I:/maven/apache-maven-3.6.1/maven-repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-27 23:25:20.362  INFO 8320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-27 23:25:20.362  INFO 8320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-27 23:25:21.074  INFO 8320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2019-12-27 23:25:21.174  INFO 8320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86ms. Found 3 JPA repository interfaces.
+2019-12-27 23:25:21.724  INFO 8320 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-27 23:25:22.537  INFO 8320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-27 23:25:22.549  INFO 8320 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-27 23:25:22.550  INFO 8320 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-27 23:25:22.700  INFO 8320 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-27 23:25:22.700  INFO 8320 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2338 ms
+2019-12-27 23:25:22.999  INFO 8320 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-27 23:25:23.085  INFO 8320 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2019-12-27 23:25:23.243  INFO 8320 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-27 23:25:23.353  INFO 8320 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-27 23:25:23.544  INFO 8320 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2019-12-27 23:25:23.547  INFO 8320 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-27 23:25:23.566  INFO 8320 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2019-12-27 23:25:24.554  INFO 8320 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-27 23:25:24.566  INFO 8320 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-27 23:25:24.874  INFO 8320 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-27 23:25:25.660  WARN 8320 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-27 23:25:27.242  INFO 8320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-27 23:25:27.245  INFO 8320 --- [restartedMain] cn.sicnu.group2.blog.BlogApplication     : Started BlogApplication in 7.856 seconds (JVM running for 9.608)
+2019-12-27 23:25:32.780  INFO 8320 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-27 23:25:32.781  INFO 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-27 23:25:32.795  INFO 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2019-12-27 23:25:33.488  WARN 8320 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /css/typo.css
+2019-12-27 23:25:33.488  WARN 8320 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /css/animate.css
+2019-12-27 23:25:33.525  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.css
+2019-12-27 23:25:33.526  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.css
+2019-12-27 23:25:33.527  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2019-12-27 23:25:33.528  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:25:33.613  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:25:33.613  WARN 8320 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:25:33.614  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:25:45.886  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:25:45.917  WARN 8320 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:25:45.935  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:25:45.944  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:25:47.544  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2019-12-27 23:26:32.261  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.261  WARN 8320 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /css/animate.css;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.261  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /css/typo.css;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.264  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.css;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.262  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.css;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.313  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.313  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.313  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.314  WARN 8320 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.316  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.404  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.418  WARN 8320 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.426  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:32.434  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js;jsessionid=E6EB359A8B333F1EECDC73148D7A1E53
+2019-12-27 23:26:35.301  WARN 8320 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /css/animate.css
+2019-12-27 23:26:35.301  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /css/typo.css
+2019-12-27 23:26:35.304  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.css
+2019-12-27 23:26:35.307  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2019-12-27 23:26:35.307  WARN 8320 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.css
+2019-12-27 23:26:35.317  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2019-12-27 23:26:35.342  WARN 8320 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:35.343  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:35.343  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:35.344  WARN 8320 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:35.393  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:35.398  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:35.405  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:37.727  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /css/typo.css
+2019-12-27 23:26:37.727  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /css/animate.css
+2019-12-27 23:26:37.728  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.css
+2019-12-27 23:26:37.728  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.css
+2019-12-27 23:26:37.739  WARN 8320 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2019-12-27 23:26:37.740  WARN 8320 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2019-12-27 23:26:37.767  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:37.767  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:37.769  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:37.769  WARN 8320 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:37.810  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:37.815  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:37.820  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:37.828  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:40.260  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /css/animate.css
+2019-12-27 23:26:40.260  WARN 8320 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /css/typo.css
+2019-12-27 23:26:40.262  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.css
+2019-12-27 23:26:40.263  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.css
+2019-12-27 23:26:40.267  WARN 8320 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2019-12-27 23:26:40.268  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2019-12-27 23:26:40.277  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:40.278  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:40.278  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:40.280  WARN 8320 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:40.319  WARN 8320 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:40.337  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:40.343  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:40.349  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:47.639  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /css/typo.css
+2019-12-27 23:26:47.642  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /css/animate.css
+2019-12-27 23:26:47.647  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.css
+2019-12-27 23:26:47.651  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.css
+2019-12-27 23:26:47.652  WARN 8320 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2019-12-27 23:26:47.657  WARN 8320 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2019-12-27 23:26:47.672  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:47.673  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:47.677  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:47.679  WARN 8320 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:47.733  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:47.771  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:47.778  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:47.784  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:50.830  WARN 8320 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /css/typo.css
+2019-12-27 23:26:50.830  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /css/animate.css
+2019-12-27 23:26:50.830  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.css
+2019-12-27 23:26:50.833  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.css
+2019-12-27 23:26:50.841  WARN 8320 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2019-12-27 23:26:50.864  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2019-12-27 23:26:50.879  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:50.879  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:50.879  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:50.881  WARN 8320 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:50.916  WARN 8320 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:50.921  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:50.928  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:50.933  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:55.789  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /css/typo.css
+2019-12-27 23:26:55.792  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.css
+2019-12-27 23:26:55.792  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /css/animate.css
+2019-12-27 23:26:55.792  WARN 8320 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.css
+2019-12-27 23:26:55.796  WARN 8320 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /css/me.css
+2019-12-27 23:26:55.796  WARN 8320 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2019-12-27 23:26:55.808  WARN 8320 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:55.808  WARN 8320 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:55.808  WARN 8320 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:55.808  WARN 8320 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
+2019-12-27 23:26:55.854  WARN 8320 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/prism/prism.js
+2019-12-27 23:26:55.893  WARN 8320 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/tocbot/tocbot.min.js
+2019-12-27 23:26:55.898  WARN 8320 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/qrcode/qrcode.min.js
+2019-12-27 23:26:55.934  WARN 8320 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /lib/waypoints/jquery.waypoints.min.js
