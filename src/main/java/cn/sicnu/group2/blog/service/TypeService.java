@@ -4,6 +4,8 @@ import cn.sicnu.group2.blog.entity.Type;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 /**
  * @author cxf
  * @date 2019/12/18 11:22
@@ -21,5 +23,7 @@ public interface TypeService {
     void deleteType(Long id);
 
     Type getTypeByName(String name);
+
+    List<Type> listType();
 
 }

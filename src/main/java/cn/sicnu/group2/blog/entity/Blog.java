@@ -11,22 +11,27 @@ import java.util.List;
 @Entity
 @Table(name = "t_blog")
 public class Blog {
+
     @Id
     @GeneratedValue
-    private  Long id;
+    private Long id;
+
     private String title;
-    private  String content;
-    private  String firstPicture;
+
+    @Basic(fetch = FetchType.LAZY)
+    @Lob
+    private String content;
+    private String firstPicture;
     private String flag;
-    private Integer view;
-    private  boolean isAppreciation;
-    private  boolean isShareStatement;
-    private  boolean isComment;
-    private  boolean isPublished;
-    private  boolean isRecommend;
-    @Temporal( TemporalType.TIMESTAMP )
+    private Integer views;
+    private boolean appreciation;
+    private boolean shareStatement;
+    private boolean commentabled;
+    private boolean published;
+    private boolean recommend;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
-    @Temporal( TemporalType.TIMESTAMP )
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
     @ManyToOne
@@ -35,43 +40,17 @@ public class Blog {
     @ManyToMany(cascade = {CascadeType.PERSIST})
     private List<Tag> tags = new ArrayList<>();
 
+
     @ManyToOne
     private User user;
 
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments = new ArrayList<>();
 
-    public List<Comment> getComments() {
-        return comments;
-    }
+    @Transient
+    private String tagIds;
 
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public List<Tag> getTags() {
-        return tags;
-    }
-
-    public void setTags(List<Tag> tags) {
-        this.tags = tags;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
-    public void setType(Type type) {
-        this.type = type;
-    }
+    private String description;
 
     public Blog() {
     }
@@ -116,52 +95,52 @@ public class Blog {
         this.flag = flag;
     }
 
-    public Integer getView() {
-        return view;
+    public Integer getViews() {
+        return views;
     }
 
-    public void setView(Integer view) {
-        this.view = view;
+    public void setViews(Integer views) {
+        this.views = views;
     }
 
     public boolean isAppreciation() {
-        return isAppreciation;
+        return appreciation;
     }
 
     public void setAppreciation(boolean appreciation) {
-        isAppreciation = appreciation;
+        this.appreciation = appreciation;
     }
 
     public boolean isShareStatement() {
-        return isShareStatement;
+        return shareStatement;
     }
 
     public void setShareStatement(boolean shareStatement) {
-        isShareStatement = shareStatement;
+        this.shareStatement = shareStatement;
     }
 
-    public boolean isComment() {
-        return isComment;
+    public boolean isCommentabled() {
+        return commentabled;
     }
 
-    public void setComment(boolean comment) {
-        isComment = comment;
+    public void setCommentabled(boolean commentabled) {
+        this.commentabled = commentabled;
     }
 
     public boolean isPublished() {
-        return isPublished;
+        return published;
     }
 
     public void setPublished(boolean published) {
-        isPublished = published;
+        this.published = published;
     }
 
     public boolean isRecommend() {
-        return isRecommend;
+        return recommend;
     }
 
     public void setRecommend(boolean recommend) {
-        isRecommend = recommend;
+        this.recommend = recommend;
     }
 
     public Date getCreateTime() {
@@ -180,6 +159,81 @@ public class Blog {
         this.updateTime = updateTime;
     }
 
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void init() {
+        this.tagIds = tagsToIds(this.getTags());
+    }
+
+    //1,2,3
+    private String tagsToIds(List<Tag> tags) {
+        if (!tags.isEmpty()) {
+            StringBuffer ids = new StringBuffer();
+            boolean flag = false;
+            for (Tag tag : tags) {
+                if (flag) {
+                    ids.append(",");
+                } else {
+                    flag = true;
+                }
+                ids.append(tag.getId());
+            }
+            return ids.toString();
+        } else {
+            return tagIds;
+        }
+    }
+
+
     @Override
     public String toString() {
         return "Blog{" +
@@ -188,14 +242,20 @@ public class Blog {
                 ", content='" + content + '\'' +
                 ", firstPicture='" + firstPicture + '\'' +
                 ", flag='" + flag + '\'' +
-                ", view=" + view +
-                ", isAppreciation=" + isAppreciation +
-                ", isShareStatement=" + isShareStatement +
-                ", isComment=" + isComment +
-                ", isPublished=" + isPublished +
-                ", isRecommend=" + isRecommend +
+                ", views=" + views +
+                ", appreciation=" + appreciation +
+                ", shareStatement=" + shareStatement +
+                ", commentabled=" + commentabled +
+                ", published=" + published +
+                ", recommend=" + recommend +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", user=" + user +
+                ", comments=" + comments +
+                ", tagIds='" + tagIds + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

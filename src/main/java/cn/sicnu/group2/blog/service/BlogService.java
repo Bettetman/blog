@@ -1,5 +1,6 @@
 package cn.sicnu.group2.blog.service;
 
+import cn.sicnu.group2.blog.BlogQuery;
 import cn.sicnu.group2.blog.entity.Blog;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,7 +11,7 @@ import org.springframework.data.domain.Pageable;
 public interface BlogService {
     Blog getBlog(Long id);
 
-    Page<Blog> listBlog(Pageable pageable,Blog blog);
+    Page<Blog> listBlog(Pageable pageable, BlogQuery blog);
 
     Blog saveBlog (Blog blog);
 
