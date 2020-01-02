@@ -6,7 +6,9 @@ import cn.sicnu.group2.blog.entity.Tag;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -86,5 +88,12 @@ public class TagServiceImpl implements TagService {
     @Override
     public void deleteTag(Long id) {
        tagRepository.deleteById( id );
+    }
+
+    @Override
+    public List<Tag> listTagTop(Integer size) {
+        Sort.Order order=new Sort.Order(Sort.Direction.DESC, "blogs.size");
+        PageRequest request = PageRequest.of(0,size,Sort.by(order));
+        return tagRepository.findTop(request);
     }
 }
